@@ -22,4 +22,9 @@ class TelegramUser extends Model
     {
         return $this->hasMany(TelegramMessage::class);
     }
+
+    public function trelloMember(): \Illuminate\Database\Eloquent\Relations\HasOne
+    {
+        return $this->hasOne(TrelloMember::class);
+    }
 }

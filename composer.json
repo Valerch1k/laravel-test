@@ -10,7 +10,8 @@
         "irazasyed/telegram-bot-sdk": "3.9",
         "laravel/framework": "^9.43",
         "laravel/sanctum": "^3.0",
-        "laravel/tinker": "^2.7"
+        "laravel/tinker": "^2.7",
+        "stevenmaguire/trello-php": "^1.0"
     },
 
     "require-dev": {

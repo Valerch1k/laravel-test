@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "61ab81fe8835eca64c9d6b9a79dd61f9",
+    "content-hash": "a15ac13fca49b15e88788c00ff9543af",
     "packages": [
         {
             "name": "brick/math",
@@ -1743,6 +1743,82 @@
             "time": "2022-04-17T13:12:02+00:00"
         },
         {
+            "name": "league/oauth1-client",
+            "version": "v1.10.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/oauth1-client.git",
+                "reference": "d6365b901b5c287dd41f143033315e2f777e1167"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/oauth1-client/zipball/d6365b901b5c287dd41f143033315e2f777e1167",
+                "reference": "d6365b901b5c287dd41f143033315e2f777e1167",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-openssl": "*",
+                "guzzlehttp/guzzle": "^6.0|^7.0",
+                "guzzlehttp/psr7": "^1.7|^2.0",
+                "php": ">=7.1||>=8.0"
+            },
+            "require-dev": {
+                "ext-simplexml": "*",
+                "friendsofphp/php-cs-fixer": "^2.17",
+                "mockery/mockery": "^1.3.3",
+                "phpstan/phpstan": "^0.12.42",
+                "phpunit/phpunit": "^7.5||9.5"
+            },
+            "suggest": {
+                "ext-simplexml": "For decoding XML-based responses."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev",
+                    "dev-develop": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\OAuth1\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ben Corlett",
+                    "email": "bencorlett@me.com",
+                    "homepage": "http://www.webcomm.com.au",
+                    "role": "Developer"
+                }
+            ],
+            "description": "OAuth 1.0 Client Library",
+            "keywords": [
+                "Authentication",
+                "SSO",
+                "authorization",
+                "bitbucket",
+                "identity",
+                "idp",
+                "oauth",
+                "oauth1",
+                "single sign on",
+                "trello",
+                "tumblr",
+                "twitter"
+            ],
+            "support": {
+                "issues": "https://github.com/thephpleague/oauth1-client/issues",
+                "source": "https://github.com/thephpleague/oauth1-client/tree/v1.10.1"
+            },
+            "time": "2022-04-15T14:02:14+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "2.8.0",
             "source": {
@@ -2964,6 +3040,70 @@
                 }
             ],
             "time": "2022-11-05T23:03:38+00:00"
+        },
+        {
+            "name": "stevenmaguire/trello-php",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stevenmaguire/trello-php.git",
+                "reference": "b7d689df47be351b6113144ca6b3e8405b7974b6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stevenmaguire/trello-php/zipball/b7d689df47be351b6113144ca6b3e8405b7974b6",
+                "reference": "b7d689df47be351b6113144ca6b3e8405b7974b6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/guzzle": "^7.0",
+                "league/oauth1-client": "^1.5",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~1.5",
+                "phpunit/phpunit": "^8.0",
+                "squizlabs/php_codesniffer": "~3.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Stevenmaguire\\Services\\Trello\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Steven Maguire",
+                    "email": "stevenmaguire@gmail.com",
+                    "homepage": "http://stevenmaguire.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP wrapper for Trello API",
+            "homepage": "http://github.com/stevenmaguire/trello-php",
+            "keywords": [
+                "client",
+                "php",
+                "trello",
+                "trello gold",
+                "wrapper"
+            ],
+            "support": {
+                "issues": "https://github.com/stevenmaguire/trello-php/issues",
+                "source": "https://github.com/stevenmaguire/trello-php/tree/1.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/stevenmaguire",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-10-27T17:52:52+00:00"
         },
         {
             "name": "symfony/console",

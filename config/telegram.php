@@ -1,5 +1,10 @@
 <?php
 
+use App\Services\Telegram\Commands\ReportCardTrelloCommand;
+use App\Services\Telegram\Commands\SaveTrelloMemberCommand;
+use App\Services\Telegram\Commands\StartCommand;
+use App\Services\Telegram\Commands\SyncTrelloMemberCommand;
+
 return [
     /*
     |--------------------------------------------------------------------------
@@ -34,7 +39,10 @@ return [
             'certificate_path'    => env('TELEGRAM_CERTIFICATE_PATH', 'YOUR-CERTIFICATE-PATH'),
             'webhook_url'         => env('TELEGRAM_WEBHOOK_URL', 'YOUR-BOT-WEBHOOK-URL'),
             'commands'            => [
-                \App\Services\Telegram\Commands\StartCommand::class
+                StartCommand::class,
+                ReportCardTrelloCommand::class,
+                SyncTrelloMemberCommand::class,
+                SaveTrelloMemberCommand::class
             ],
         ],
 
@@ -42,6 +50,8 @@ return [
         //            'token' => '123456:abc',
         //        ],
     ],
+
+    'chat_id_default' => '-1001807038956',
 
     /*
     |--------------------------------------------------------------------------
@@ -111,7 +121,7 @@ return [
     |
     */
     'commands'                     => [
-        Telegram\Bot\Commands\HelpCommand::class,
+//        Telegram\Bot\Commands\HelpCommand::class,
     ],
 
     /*
