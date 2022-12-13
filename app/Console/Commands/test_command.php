@@ -31,14 +31,14 @@ class test_command extends Command
 
 //        $trelloService = new TrelloService();
         $members = $this->trelloService->getAllMembers();
-
-        dd('stop');
+        $this->trelloHookCreate();
+        dd('start');
         $telegram = new Api();
         // chanel id -1001773491481
         // bot id 5383851478
-        // hook id 6398ada19ff2f902293c6c89
-        $url = 'https://5b9f-83-8-142-114.eu.ngrok.io/hook/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI/telegram/start';
-        $this->setHook($telegram,$url);
+        // hook id 6398e055e24a20023c5b6009
+        $url = 'https://1ed0-83-8-142-114.eu.ngrok.io/hook/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI/telegram/start';
+        $this->setHook($telegram, $url);
 
         return Command::SUCCESS;
     }
@@ -76,7 +76,7 @@ class test_command extends Command
         ));
 
         $webhook = $client->addWebhook([
-            'callbackURL' => 'https://5b9f-83-8-142-114.eu.ngrok.io/hook/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI/trello/start',
+            'callbackURL' => 'https://1ed0-83-8-142-114.eu.ngrok.io/hook/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI/trello/start',
             'idModel' => '63988cc2ba090e007667d0d2',
         ]);
         Log::info('id trello');
