@@ -2,6 +2,7 @@
 
 namespace App\Services\Telegram\Commands;
 
+use App\Events\TelegramStartCommand;
 use Telegram\Bot\Commands\Command;
 
 class StartCommand extends Command
@@ -29,10 +30,10 @@ class StartCommand extends Command
         $response = $this->getUpdate();
         $firstName = $response->message->from->firstName ?? $response->channelPost->senderChat->title ?? '';
         $lastName = $response->message->from->lastName ?? '';
-        $text = "Hey {$firstName} {$lastName}, thanks for visiting me.".chr(10).chr(10);
-//        $text .= 'I am a bot and working for'.chr(10);
-//        $text .= env('APP_URL').chr(10).chr(10);
-//        $text .= 'Please come and visit me there.'.chr(10);
+
+        $text = "Hey {$firstName} {$lastName}, thanks for visiting me.".chr(10);
+
+        TelegramStartCommand::dispatch($response->message);
 
         $this->replyWithMessage(compact('text'));
 
