@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('telegram_users', function (Blueprint $table) {
             $table->id();
-            $table->integer('telegram_id');
+            $table->bigInteger('telegram_id');
             $table->boolean('is_bot')->default(false);
             $table->string('first_name');
             $table->string('last_name');
