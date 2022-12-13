@@ -8,7 +8,7 @@ use Telegram\Bot\Laravel\Facades\Telegram;
 
 class TelegramHookController
 {
-    public function boot(Request $request)
+    public function start(Request $request)
     {
         Log::info($request->all());
         $update = Telegram::commandsHandler(true);

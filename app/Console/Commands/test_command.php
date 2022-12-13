@@ -22,7 +22,7 @@ class test_command extends Command
         $telegram = new Api();
         // chanel id -1001773491481
         // bot id 5383851478
-        $url = 'https://6626-83-8-142-114.eu.ngrok.io/api/hook/boot';
+        $url = 'https://6626-83-8-142-114.eu.ngrok.io/hook/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI/start';
         $this->getWebHookInfo($telegram);
 
         return Command::SUCCESS;

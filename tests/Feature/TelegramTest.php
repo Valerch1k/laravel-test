@@ -15,7 +15,7 @@ class TelegramTest extends TestCase
      */
     public function test_boot_response()
     {
-        $response = $this->post('api/hook/boot');
+        $response = $this->post('hook/'.config('token_valid.token').'/start');
 
         $response->assertStatus(200);
     }
