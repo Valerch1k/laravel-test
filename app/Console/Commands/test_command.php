@@ -37,7 +37,7 @@ class test_command extends Command
 //        $this->setHook($telegram,$urlTelegram);
         //*****************************************
         $this->trelloHookGet();
-        $this->trelloDeleteHook('639906fa9f7f990030b65bc6');
+//        $this->trelloDeleteHook('639906fa9f7f990030b65bc6');
         $this->trelloHookCreate($urlTrello);
 
         dd('start');
