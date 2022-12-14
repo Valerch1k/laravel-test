@@ -24,7 +24,7 @@ class TrelloHookController
                 'text' => "On Board: {$boardName} , card: {$cardName} status changed to {$event} "
             ]);
         }
-        return response()->json($res);
+        return response()->json('ok');
     }
 
 }
