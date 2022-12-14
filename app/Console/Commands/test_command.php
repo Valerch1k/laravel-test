@@ -28,15 +28,23 @@ class test_command extends Command
      */
     public function handle(): int
     {
-
-//        $trelloService = new TrelloService();
         $members = $this->trelloService->getAllMembers();
-        $this->trelloHookCreate();
+        $urlTelegram = 'http://167.172.173.22/hook/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI/telegram/start';
+        $urlTrello = 'http://167.172.173.22/hook/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI/trello/start';
+
+        $telegram = new Api();
+        $this->deleteHook($telegram);
+        $this->setHook($telegram,$urlTelegram);
+        //*****************************************
+        $this->trelloHookGet();
+        $this->trelloDeleteHook("639906fa9f7f990030b65bc6");
+        $this->trelloHookCreate($urlTrello);
+
         dd('start');
         $telegram = new Api();
         // chanel id -1001773491481
         // bot id 5383851478
-        // hook id 6398e055e24a20023c5b6009
+        // hook id 639906fa9f7f990030b65bc6
         $url = 'https://1ed0-83-8-142-114.eu.ngrok.io/hook/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI/telegram/start';
         $this->setHook($telegram, $url);
 
@@ -68,7 +76,7 @@ class test_command extends Command
 
     }
 
-    public function trelloHookCreate()
+    public function trelloHookCreate($url)
     {
         $client = new Client(array(
             'key' => config('trello.key'),
@@ -76,7 +84,7 @@ class test_command extends Command
         ));
 
         $webhook = $client->addWebhook([
-            'callbackURL' => 'https://1ed0-83-8-142-114.eu.ngrok.io/hook/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI/trello/start',
+            'callbackURL' => $url,
             'idModel' => '63988cc2ba090e007667d0d2',
         ]);
         Log::info('id trello');

@@ -16,7 +16,7 @@ class TrelloHookController
         $boardName = $request->input('model.name') ?? '';
         $cardName = $request->input('action.data.card.name') ?? '';
         $event = $request->input('action.data.listAfter.name')  ?? false;
-        
+
         if ($event){
             $telegram = new Api();
             $res = $telegram->sendMessage([
