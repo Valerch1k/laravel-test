@@ -32,7 +32,7 @@ class test_command extends Command
         $urlTelegram = 'https://167.172.173.22/hook/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI/telegram/start';
         $urlTrello = 'https://167.172.173.22/hook/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI/trello/start';
 
-//        $telegram = new Api();
+//        $telegram = new Api();  
 //        $this->deleteHook($telegram);
 //        $this->setHook($telegram,$urlTelegram);
         //*****************************************
