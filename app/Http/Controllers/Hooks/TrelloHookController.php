@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers\Hooks;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Stevenmaguire\Services\Trello\Client;
 use Telegram\Bot\Api;
 
-class TrelloHookController
+class TrelloHookController extends Controller
 {
     public function start(Request $request)
     {

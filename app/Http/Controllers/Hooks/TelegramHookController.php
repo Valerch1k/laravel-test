@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Hooks;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Telegram\Bot\Laravel\Facades\Telegram;
 
-class TelegramHookController
+class TelegramHookController extends Controller
 {
     public function start(Request $request)
     {
