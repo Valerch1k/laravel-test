@@ -29,22 +29,23 @@ class test_command extends Command
     public function handle(): int
     {
         $members = $this->trelloService->getAllMembers();
-        $urlTelegram = 'https://167.172.173.22/hook/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI/telegram/start';
-        $urlTrello = 'https://167.172.173.22/hook/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI/trello/start';
+        $urlTelegram = 'https://laraveltest.ga/hook/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI/telegram/start';
+        $urlTrello = 'https://laraveltest.ga/hook/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI/trello/start';
 
-//        $telegram = new Api();
+        $telegram = new Api();
 //        $this->deleteHook($telegram);
 //        $this->setHook($telegram,$urlTelegram);
         //*****************************************
 //        $this->trelloHookGet();
-//        $this->trelloDeleteHook('639906fa9f7f990030b65bc6');
+//        $this->trelloDeleteHook('6399a93286d66201010c4c29');
+
         $this->trelloHookCreate($urlTrello);
 
         dd('start');
         $telegram = new Api();
         // chanel id -1001773491481
         // bot id 5383851478
-        // hook id 639906fa9f7f990030b65bc6
+        // hook id 63994939c63611028a0c4ef2
         $url = 'https://7590-83-8-142-114.eu.ngrok.io/hook/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI/telegram/start';
         $this->setHook($telegram, $url);
 
@@ -63,7 +64,7 @@ class test_command extends Command
         $organizations = $client->getCurrentUserOrganizations();
 
         $webhook = $client->getTokenWebhooks( config('trello.token'));
-        Log::info('id trello');
+        Log::info("id trello: {$webhook[0]->id}");
     }
 
     public function trelloDeleteHook($id)
