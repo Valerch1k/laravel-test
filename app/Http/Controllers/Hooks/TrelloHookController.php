@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Hooks;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Log;
 use Stevenmaguire\Services\Trello\Client;
 use Telegram\Bot\Api;
@@ -25,7 +26,7 @@ class TrelloHookController extends Controller
                 'text' => "On Board: {$boardName} , card: {$cardName} status changed to {$event} "
             ]);
         }
-        return response()->json('ok');
+        return response()->noContent(Response::HTTP_OK);
     }
 
 }

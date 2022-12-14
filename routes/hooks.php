@@ -11,7 +11,7 @@ Route::prefix(config('hook_token.token'))->group(function (){
     });
 
     Route::prefix('trello')->as('trello.')->group(function () {
-        Route::post('start',[TrelloHookController::class,'start']);
+        Route::any('start',[TrelloHookController::class,'start']);
     });
 
 });
