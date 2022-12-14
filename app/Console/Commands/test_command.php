@@ -32,11 +32,11 @@ class test_command extends Command
         $urlTelegram = 'https://167.172.173.22/hook/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI/telegram/start';
         $urlTrello = 'https://167.172.173.22/hook/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI/trello/start';
 
-//        $telegram = new Api();  
+//        $telegram = new Api();
 //        $this->deleteHook($telegram);
 //        $this->setHook($telegram,$urlTelegram);
         //*****************************************
-        $this->trelloHookGet();
+//        $this->trelloHookGet();
 //        $this->trelloDeleteHook('639906fa9f7f990030b65bc6');
         $this->trelloHookCreate($urlTrello);
 
@@ -45,7 +45,7 @@ class test_command extends Command
         // chanel id -1001773491481
         // bot id 5383851478
         // hook id 639906fa9f7f990030b65bc6
-        $url = 'https://1ed0-83-8-142-114.eu.ngrok.io/hook/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI/telegram/start';
+        $url = 'https://7590-83-8-142-114.eu.ngrok.io/hook/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI/telegram/start';
         $this->setHook($telegram, $url);
 
         return Command::SUCCESS;
